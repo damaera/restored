@@ -1,12 +1,11 @@
 {
   "name": "restored",
   "version": "0.1.0",
+  "main": "src/index.js",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w -ws _ ",
-    "clean": "bsb -clean-world",
-    "server": "moduleserve ./ --port 8000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bs:build": "bsb -make-world",
+    "bs:start": "bsb -make-world -w -ws _ ",
+    "bs:clean": "bsb -clean-world"
   },
   "keywords": [
     "BuckleScript",
@@ -21,7 +20,7 @@
     "reason-react": ">=0.7.0"
   },
   "devDependencies": {
-    "bs-platform": "^5.2.1",
-    "moduleserve": "^0.8.4"
+    "@types/react": "^16.9.27",
+    "bs-platform": "^7.2.2"
   }
 }

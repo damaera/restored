@@ -27,6 +27,8 @@ module Make = (Container: ContainerT) => {
         children
       </ContextProvider>;
     };
+
+    let default = make;
   };
 
   let useStore = () => {

@@ -25,8 +25,9 @@ function Make(Container) {
   var Restored$Make$Provider = function (Props) {
     var initialState = Props.initialState;
     var children = Props.children;
-    var partial_arg = Container.reducer;
-    var match = React.useReducer(Curry.__2(partial_arg), initialState);
+    var match = React.useReducer((function (param, param$1) {
+            return Curry._2(Container.reducer, param, param$1);
+          }), initialState);
     return React.createElement(make, makeProps(/* tuple */[
                     match[0],
                     match[1]
@@ -34,7 +35,8 @@ function Make(Container) {
   };
   var Provider = {
     ContextProvider: ContextProvider,
-    make: Restored$Make$Provider
+    make: Restored$Make$Provider,
+    $$default: Restored$Make$Provider
   };
   var useStore = function (param) {
     var value = React.useContext(context);
@@ -55,7 +57,7 @@ function Make(Container) {
     var state = match[0];
     return React.useMemo((function () {
                   return Curry._1(selector, state);
-                }), /* array */[state]);
+                }), [state]);
   };
   return {
           Provider: Provider,
