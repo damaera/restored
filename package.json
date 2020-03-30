@@ -2,6 +2,7 @@
   "name": "restored",
   "version": "0.1.0",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "bs:build": "bsb -make-world",
     "bs:start": "bsb -make-world -w -ws _ ",
@@ -12,7 +13,7 @@
     "ReasonReact",
     "reason-react"
   ],
-  "author": "",
+  "author": "damaera",
   "license": "MIT",
   "dependencies": {
     "react": "^16.8.1",
